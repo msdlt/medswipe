@@ -19,9 +19,7 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td>
-			<?php 
-				echo $course['Course']['name'];
-			?>
+			<?php echo $course['Course']['name']; ?>
 		</td>
 		<td class="actions">
 			<?php 
