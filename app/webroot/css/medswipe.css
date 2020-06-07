@@ -1,0 +1,360 @@
+@CHARSET "ISO-8859-1";
+/*.grid_row{
+	display: inline;
+	font-size: 1em;
+	padding:1px;
+}*/
+/*div.grid_row{
+	padding:3px !important;
+	margin-bottom:0px !important;
+	display: block;
+	border: 1px solid #ccc;
+}*/
+tr.grid_row td input{
+	clear: none !important;
+	
+	/*width: auto;*/	
+}
+td.event_name{
+	width: 50%;
+	}
+div.dates_container{
+	margin-left: 5px;
+}
+/*div.date_start_container{
+	width: 300px;
+	float: left;
+	clear: none !important;
+	margin-left: 5px;
+}*/
+/*div.date_end_container{
+	margin-left: 5px;
+	margin-left: 310px;
+	clear: none !important;
+}*/
+div.courses_user_row{
+	padding:3px !important;
+	margin-bottom:0px !important;
+	display: block;
+	border: 1px solid #ccc;
+	height: 2.5em;
+}
+label.courses_user{
+	display: inline;
+	vertical-align: text-bottom;
+}
+
+select.courses_user{
+	float:right;
+	vertical-align: text-top;
+}
+table.hidden_table{
+	display: none;
+}
+
+div.headings{
+	float: left;
+	width: 95%;
+	}
+div.barcode_form{
+	float: right;
+	width: 350px;
+	}
+div#attendee_image{
+	float: left;
+	height: 184px;
+	display: none;
+	width:100%;
+	}
+div#attendee_image img{
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	}
+div.barcode_form{
+	float: right;
+	width: 33%;
+	}
+	
+.clear_both{
+	overflow: auto;
+	width: 95%;
+	clear:both;
+	}
+
+div.remove_event{
+	float:right;
+}
+div.add_event{
+	float:right;
+}
+div.add_courses_user{
+	float:right;
+}
+div.input.select{
+	width:70%;
+	clear:none;
+	float:left;
+}
+div.courses_user_controls{
+	width:70%;
+	clear:none;
+	float:left;
+}
+input.event_name{
+	/*display: block;
+	width: 95%;
+	padding:3px;
+	vertical-align: text-bottom;*/
+	/*margin-top: -10px;*/
+	width: 95%;
+	font-size: 1em;
+}
+input.user_name{
+	display: inline;
+	clear:none;
+	width: 70%;
+	padding:3px;
+	vertical-align: text-bottom;
+	/*margin-top: -10px;*/
+}
+input.course_name{
+	display: block;
+	font-size: 1em;
+	padding:3px;
+}
+select.event_date{
+	/*margin-top:7px;*/
+}
+input.barcode{
+	width: 50px;	
+	color: red !important;
+	background-color: red !important;
+	border:red !important;
+	outline: 5px auto red;
+}
+input.barcode:focus{	
+	color: green !important;
+	background-color: green !important;
+	border:green !important;
+	outline: 5px auto green;
+}
+
+input[type="submit"].barcode{	
+	background: none !important;
+	text-shadow: none !important;
+	color: #FFFFFF !important;
+	outline: none;
+}
+input[type="text"].event_date{
+	width: 100%;
+	font-size: 1em;
+}
+div#grid_row{
+	display:none;
+}
+div#courses_user_row{
+	display:none;
+}
+h3#thank_you{
+	margin-top: 1em;
+	color: red;	
+}
+div.form, div.index, div.view {
+    border-left: none;
+    float: right;
+    padding: 5px;
+    width: 76%;
+}
+#content {
+    padding: 0px;
+	/*overflow:visible;
+	overflow-y:visible;
+	overflow-x:auto;*/
+}
+div.breadcrumb{
+	color: #AAAAAA;
+}
+div.breadcrumb a{
+	color: #AAAAAA;
+}
+form{
+	 margin:0px;
+}
+table {
+	border-spacing: 0px;
+}
+button.add_button{
+	width: auto;
+	font-weight: normal;
+	padding: 4px 8px;
+	background: #E6E49F;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F1F1D4), to(#E6E49F));
+	background-image: -moz-linear-gradient(top, #F1F1D4, #E6E49F);
+	color: #333;
+	border: 1px solid #AAAC62;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	text-decoration: none;
+	text-shadow: white 0px 1px 0px;
+	min-width: 0;
+}
+
+/* Accordion to show events in course list 
+span.accordion {
+	padding-left:18px;
+	background:#ffffff url('../img/accordion/down_arrow.png') no-repeat left center;
+}
+span.accordion_head_active{
+	background:#ffffff url('../img/accordion/up_arrow.png') no-repeat left center;
+}
+div.accordion_events{
+	padding-left:18px;
+}*/
+fieldset fieldset legend {
+    font-size: 120%;
+    font-weight: normal;
+}
+fieldset legend {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #AB8E42;
+    font-size: 160%;
+    font-weight: bold;
+}
+button.cancel, button.submit, input.submit {
+    cursor: pointer !important;
+    font-size: 110%;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 2px 5px;
+    width: auto;
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 0.4em 0.4em 0.4em 0.4em;
+    clear: none;
+    display: inline;
+    font: bold 0.95em arial,sans-serif;
+}
+button:hover, button:focus {
+border-color: #C5C5C5;
+background: #F6F6F6;
+}
+form div.controls {
+    text-align: right;
+}
+ 
+/* use a semi-transparent image for the overlay */
+#overlay, #prompt{
+	background-color:#fff;
+	display:none;
+	width:400px;
+	padding:15px;
+	text-align:center;
+	border:2px solid #333;
+	
+	opacity:0.8;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-box-shadow: 0 0 50px #ccc;
+	-webkit-box-shadow: 0 0 50px #ccc;
+}
+
+#overlay .close {
+	background-image:url(../img/interface/close.png);
+	position:absolute;
+	right:-15px;
+	top:-15px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+/* container for external content. uses vertical scrollbar, if needed */
+div.contentWrap {
+	/*height:441px;
+	overflow-y:auto;*/
+} 
+
+/*overriding Cake's default message styles*/
+div.message {
+	clear: both;
+	color: #c73e14;
+	font-size: 140%;
+	font-weight: bold;
+	margin: 0 0 1em 0;
+	background: none ;
+	padding: 5px;
+}
+div.error-message {
+	clear: both;
+	color: #c73e14;
+	font-weight: bold;
+	background: none;
+}
+div.errors {
+	color: #c73e14;
+}
+div.errors  h3{
+	color: #c73e14;
+}
+p.error {
+	background-color: none;
+	color: #e32;
+	font-family: Courier, monospace;
+	font-size: 120%;
+	line-height: 140%;
+	padding: 0.8em;
+	margin: 1em 0;
+}
+p.error em {
+	color: #000;
+	font-weight: normal;
+	line-height: 140%;
+}
+.notice {
+	background: none;
+	color: #ffcc00;
+	display: block;
+	font-family: Courier, monospace;
+	font-size: 120%;
+	line-height: 140%;
+	padding: 0.8em;
+	margin: 1em 0;
+}
+#success {
+	background: none;
+	/*color: green;*/
+	overflow:auto;
+}
+th.ui-th-column div {
+    word-wrap: break-word; /* IE 5.5+ and CSS3 */
+    white-space: pre-wrap; /* CSS3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    overflow: hidden;
+    height: auto !important;
+    vertical-align: middle;
+}
+
+#grid_wrapper_participants{
+float:left;
+width: 34%;
+}
+#grid_wrapper_attendees{
+float:left;
+width: 64%;
+}
+dl {
+    line-height: 1em;
+    margin: 0;
+    width: auto;
+}
+
+
+	

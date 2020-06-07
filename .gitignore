@@ -1,0 +1,7 @@
+vendors/
+plugins/
+lib/
+app/config/database.php
+app/tmp/
+app/Vendor/
+app/webroot/img/attendees/

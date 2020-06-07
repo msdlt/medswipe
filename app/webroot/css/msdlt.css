@@ -1,0 +1,126 @@
+body, html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+    font-family: 'lucida grande',verdana,helvetica,arial,sans-serif;
+    height: 100%;
+}
+div#container{
+	min-height:100%;
+	position: relative;
+	padding-bottom: 100px;
+}
+h2 {
+    font-size: 22px;
+}
+h1, h2, h3, h4 {
+    color: #062034;
+    font-family: 'lucida grande',verdana,helvetica,arial,sans-serif;
+    font-weight: bold;
+}
+a {
+    color: #062034;
+    font-weight: normal;
+    text-decoration: underline;
+}
+a:hover {
+    color: #365778;
+    text-decoration: underline;
+}
+/* Header Styles */
+#top_bar_top {
+    background-color: #062034;
+    color: #FFFFFF;
+    height: 33px;
+    line-height: 33px;
+    text-align:right;
+    padding-right: 20px;
+}
+#top_bar_middle {
+    background: url("../img/header/logo_bar1px.gif") repeat-x scroll 0 0 #062034;
+    height: 93px;
+    line-height: 1;
+}
+#top_bar_middle_titlebg {
+    background: url("../img/header/top-banner-plain.gif") no-repeat scroll left top transparent;
+    color: white;
+    float: left;
+    font-size: 48px;
+    height: 73px;
+    line-height: 1.5em;
+    min-width: 205px;
+    overflow: hidden;
+    padding-left: 22.5%; /*195px;*/
+    padding-top: 16px;
+}
+#top_bar_bottom {
+    background: url("../img/header/logo_bar_bottom1px.gif") repeat-x scroll 0 0 #062034;
+    height: 33px;
+    margin-top: 0;
+    padding-top: 0;
+}
+#navcontainer ul li a {
+    color: #FFFFFF;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 0.2em;
+    padding-bottom: 10px;
+    padding-right: 8px;
+    text-align: center;
+    text-decoration: none;
+    width: 104px;
+}
+#navcontainer ul {
+    float: left;
+    line-height: 33px;
+    margin-left: 0;
+    padding-left: 22.5%;
+}
+#navcontainer ul li {
+    display: inline;
+}
+#navcontainer a:hover {
+	background: url("../img/header/nav-hover.gif") no-repeat;    
+}
+#navcontainer a.current {
+	background: url("../img/header/nav-active-state-width120px.gif") no-repeat; 
+} 	
+/* End Header Styles */
+/* Footer Styles */
+#footer {
+    background: url("../img/footer/footer-bar.jpg") repeat-x scroll 0 0 #AB8E42;
+    bottom: 0;
+    clear: both;
+    color: #062034;
+    font-size: 0.85em;
+    height: 100px;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+}
+#footer_container{
+	 margin: auto; 
+	 width: 920px; 
+	 height: 100px;
+}
+#msd_logo {
+    border: 1px solid white;
+    float: left;
+    height: 73px;
+    margin-top: 15px;
+}
+#oxlogo {
+    float: left;
+    margin-left: 25px;
+    margin-top: 27px;
+    width: 157px;
+}
+#footercontent {
+    line-height: 1.2;
+    margin-left: 282px;
+    padding-top: 27px;
+}
+#legallinks, #contactlinks {
+    font-weight: bold;
+}

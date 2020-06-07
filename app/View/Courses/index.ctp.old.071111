@@ -1,0 +1,71 @@
+<div class="courses index">
+	<h2><?php __('Courses');?></h2>
+	<table cellpadding="0" cellspacing="0">
+	<tr>
+			<th><?php echo $this->Paginator->sort('name');?></th>
+			<th class="actions"><?php __('Actions');?></th>
+	</tr>
+	<?php
+	$i = 0;
+	//debug($courses);
+	foreach ($courses as $course):
+		$class = null;
+		if ($i++ % 2 == 0) {
+			$class = ' class="altrow"';
+		}
+	?>
+	<tr<?php echo $class;?>>
+		<td>
+			<?php 
+				echo "<span class='accordion'>".$course['Course']['name']."</span>";
+				echo '<div class="accordion_events">';
+				echo '<ul>';
+				foreach ($course['Event'] as $event)
+					{
+					echo "<li>".$this->Html->link($event['name'], array('controller'=>'events_users','action'=>'view_attendees',$event['id']))."</li>";
+					}
+				echo '</ul>';
+				echo '</div>';
+			?>
+		</td>
+		<td class="actions">
+			<?php 
+			if($course['CoursesUser'][0]['user_type']=='admin')
+				echo $this->Html->link(__('Edit course', true), array('action' => 'edit', $course['Course']['id'])); 
+				//only allow delete if no events_users for ant event in a course
+				//echo $this->Html->link(__('Delete', true), array('action' => 'delete', $course['Course']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $course['Course']['id']));
+			?>
+		</td>
+	</tr>
+<?php endforeach; ?>
+	</table>
+	<p>
+	<?php
+	echo $this->Paginator->counter(array(
+	'format' => __('Page %page% of %pages%, showing %current% courses out of %count% total', true)
+	));
+	?>	</p>
+
+	<div class="paging">
+		<?php echo $this->Paginator->prev('<< ' . __('previous', true), array(), null, array('class'=>'disabled'));?>
+	 | 	<?php echo $this->Paginator->numbers();?>
+ |
+		<?php echo $this->Paginator->next(__('next', true) . ' >>', array(), null, array('class' => 'disabled'));?>
+	</div>
+	<p>Click <?php echo $this->Html->image('accordion/down_arrow.png');?>to display events for each course and access attendance lists</p>
+</div>
+<div class="actions">
+	<h3><?php __('Actions'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('New Course', true), array('action' => 'add')); ?></li>
+	</ul>
+</div>
+<script>
+$('.accordion').bind('dblclick',function(e){
+		    e.preventDefault();
+});
+$('.accordion').click(function() {
+	$(this).toggleClass('accordion_head_active').next().toggle('blind');
+	return false;
+}).next().hide();
+		</script>
