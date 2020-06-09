@@ -18,12 +18,10 @@ function multidimensional_search($parents, $searched)
 	  	return false; 
 		} 
 
-		
+App::uses('PhpSpreadsheet', 'Vendor');		
 		
 class EventsUsersController extends AppController {
 
-	App::uses('PhpSpreadsheet', 'Vendor');
-	
 	var $name = 'EventsUsers';
 	public $components = array('RequestHandler');
 	public $helpers = array('PhpExcel');
