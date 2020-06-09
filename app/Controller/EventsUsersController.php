@@ -22,6 +22,10 @@ function multidimensional_search($parents, $searched)
 		
 class EventsUsersController extends AppController {
 
+	use Vendor\PhpSpreadsheet\Spreadsheet;
+	use Vendor\PhpSpreadsheet\Helper;
+	use Vendor\PhpSpreadsheet\Writer\Xlsx;
+
 	var $name = 'EventsUsers';
 	public $components = array('RequestHandler');
 	public $helpers = array('PhpExcel');
@@ -466,7 +470,10 @@ class EventsUsersController extends AppController {
 	  						)
   						);
 	  			
-	  			$this->set('course_events', $course_events);
+				$this->set('course_events', $course_events);
+				//instead of rendering a .ctp file, let's just write out directly
+				
+
 	  			$this->render('excel_get_course_attendance', 'ajax');//which ctp, which layout
 	  			}
 	  		else 
