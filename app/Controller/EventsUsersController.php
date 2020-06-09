@@ -22,10 +22,8 @@ function multidimensional_search($parents, $searched)
 		
 class EventsUsersController extends AppController {
 
-	use Vendor\PhpSpreadsheet\Worksheet;
-	use Vendor\PhpSpreadsheet\Helper;
-	use Vendor\PhpSpreadsheet\Writer\Xlsx;
-
+	App::uses('PhpSpreadsheet', 'Vendor');
+	
 	var $name = 'EventsUsers';
 	public $components = array('RequestHandler');
 	public $helpers = array('PhpExcel');
