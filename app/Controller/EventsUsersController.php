@@ -18,7 +18,7 @@ function multidimensional_search($parents, $searched)
 	  	return false; 
 		} 
 
-App::uses('PhpSpreadsheet', 'Vendor');		
+App::import('Vendor', 'Worksheet', , array('file' => 'PhpSpreadsheet'.DS.'Worksheet'.DS.'Worksheet.php'));		
 		
 class EventsUsersController extends AppController {
 
@@ -468,7 +468,7 @@ class EventsUsersController extends AppController {
 	  			
 				$this->set('course_events', $course_events);
 				//instead of rendering a .ctp file, let's just write out directly
-				
+				//$spreadsheet = new PhpSpreadsheet
 
 	  			$this->render('excel_get_course_attendance', 'ajax');//which ctp, which layout
 	  			}
