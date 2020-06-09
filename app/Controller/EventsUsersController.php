@@ -22,7 +22,7 @@ function multidimensional_search($parents, $searched)
 		
 class EventsUsersController extends AppController {
 
-	use Vendor\PhpSpreadsheet\Spreadsheet;
+	use Vendor\PhpSpreadsheet\Worksheet;
 	use Vendor\PhpSpreadsheet\Helper;
 	use Vendor\PhpSpreadsheet\Writer\Xlsx;
 
