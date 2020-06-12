@@ -473,7 +473,15 @@ class EventsUsersController extends AppController {
 	  			
 				$this->set('course_events', $course_events);
 				//instead of rendering a .ctp file, let's just write out directly
+				
+				$spreadsheetRow =  1;  //for storing active row
+				$offset =  0;
+				
 				$spreadsheet = new Spreadsheet();
+
+				//set some styles
+				$this->xls->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setName('Cambria');
+				$this->xls->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setBold(true);
 
 				$course_event_ids = array();
 
@@ -490,7 +498,14 @@ class EventsUsersController extends AppController {
 				////debug($table);	
 
 				// heading 
-				$spreadsheet->addTableHeader($table, array('name' => 'Cambria', 'bold' => true)); 
+				foreach($table as $columnLabel) {
+					$this->xls->getActiveSheet()->setCellValueByColumnAndRow($offset, $spreadsheetRow, $columnLabel['label']);
+				}
+				
+
+
+
+				/*$spreadsheet->addTableHeader($table, array('name' => 'Cambria', 'bold' => true)); 
 
 				// data 
 				foreach ($course_users['rows'] as $course_user) { 
@@ -507,11 +522,11 @@ class EventsUsersController extends AppController {
 					$spreadsheet->addTableRow($row_array); 
 				}
 
-				$spreadsheet->addTableFooter();
+				$spreadsheet->addTableFooter();*/
 
 				//debug($this->PhpExcel)
 				$writer = new Xlsx($spreadsheet);
-				$writer ->save(WWW_ROOT . ‘/files/ example.xlsx’);
+				$writer ->save('php://output');
 							
 
 				//http://abakalidis.blogspot.com/2018/08/how-to-use-latest-phpofficespreadsheet.html
