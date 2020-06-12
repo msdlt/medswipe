@@ -298,6 +298,9 @@ class EventsUsersController extends AppController {
 		
 	function ajax_get_course_attendance()
 		{
+
+		$this->autoRender = false ;
+
 		//debug($this->request);
 		if(isset($this->request['named']['course_id']))
 			{
@@ -527,9 +530,9 @@ class EventsUsersController extends AppController {
 				//debug($this->PhpExcel)
 				$writer = new Xlsx($spreadsheet);
 				$writer ->save('php://output');
-							
+				exit();			
 
-				//http://abakalidis.blogspot.com/2018/08/how-to-use-latest-phpofficespreadsheet.html
+				
 
 	  			//$this->render('excel_get_course_attendance', 'ajax');//which ctp, which layout
 	  			}
