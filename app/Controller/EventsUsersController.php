@@ -483,7 +483,7 @@ class EventsUsersController extends AppController {
 				$spreadsheet = new Spreadsheet();
 
 				//set some styles
-				$spreadsheet->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setName('Cambria');
+				//$spreadsheet->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setName('Cambria');
 				$spreadsheet->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setBold(true);
 
 				$course_event_ids = array();
@@ -507,14 +507,8 @@ class EventsUsersController extends AppController {
 					$offset++;
 				}
 				
-
-
-
-				/*$spreadsheet->addTableHeader($table, array('name' => 'Cambria', 'bold' => true)); 
-
 				// data 
 				foreach ($course_users['rows'] as $course_user) { 
-					//debug($course_user);
 					$row_array = array($course_user['last_name'],$course_user['first_name'],$course_user['no_of_events']);
 					for ($i=0;$i<count($course_event_ids);$i++){
 						if(isset($course_user[$course_event_ids[$i]])){
@@ -524,10 +518,17 @@ class EventsUsersController extends AppController {
 							array_push($row_array,'n/a');
 							}
 						}
-					$spreadsheet->addTableRow($row_array); 
+					$spreadsheetRow++;	
+					$offset = 1;
+					foreach($row_array as $columnValue) {
+						$spreadsheet->getActiveSheet()->setCellValueByColumnAndRow($offset, $spreadsheetRow, $columnValue);
+						$offset++;
+					}
+	
+					//$spreadsheet->addTableRow($row_array); 
 				}
 
-				$spreadsheet->addTableFooter();*/
+				//$spreadsheet->addTableFooter();*/
 
 				//debug($this->PhpExcel)
 				header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
