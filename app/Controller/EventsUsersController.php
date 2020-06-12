@@ -470,11 +470,12 @@ class EventsUsersController extends AppController {
 	  			
 				$this->set('course_events', $course_events);
 				//instead of rendering a .ctp file, let's just write out directly
-				//$spreadsheet = new PhpSpreadsheet
+				$spreadsheet = new Worksheet
+				
 
 				//http://abakalidis.blogspot.com/2018/08/how-to-use-latest-phpofficespreadsheet.html
 
-	  			$this->render('excel_get_course_attendance', 'ajax');//which ctp, which layout
+	  			//$this->render('excel_get_course_attendance', 'ajax');//which ctp, which layout
 	  			}
 	  		else 
 	  			{
