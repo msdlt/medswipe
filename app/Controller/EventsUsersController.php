@@ -480,8 +480,8 @@ class EventsUsersController extends AppController {
 				$spreadsheet = new Spreadsheet();
 
 				//set some styles
-				$this->xls->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setName('Cambria');
-				$this->xls->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setBold(true);
+				$spreadsheet->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setName('Cambria');
+				$spreadsheet->getActiveSheet()->getStyle($spreadsheetRow)->getFont()->setBold(true);
 
 				$course_event_ids = array();
 
@@ -499,7 +499,7 @@ class EventsUsersController extends AppController {
 
 				// heading 
 				foreach($table as $columnLabel) {
-					$this->xls->getActiveSheet()->setCellValueByColumnAndRow($offset, $spreadsheetRow, $columnLabel['label']);
+					$spreadsheet->getActiveSheet()->setCellValueByColumnAndRow($offset, $spreadsheetRow, $columnLabel['label']);
 				}
 				
 
