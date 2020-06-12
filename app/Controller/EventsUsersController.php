@@ -18,7 +18,9 @@ function multidimensional_search($parents, $searched)
 	  	return false; 
 		} 
 
-App::import('Vendor', 'Worksheet', array('file' => 'PhpSpreadsheet'.DS.'Worksheet'.DS.'Worksheet.php'));		
+//App::import('Vendor', 'Worksheet', array('file' => 'PhpSpreadsheet'.DS.'Worksheet'.DS.'Worksheet.php'));	
+
+use PhpOffice\PhpSpreadsheet\Worksheet;
 		
 class EventsUsersController extends AppController {
 
@@ -469,6 +471,8 @@ class EventsUsersController extends AppController {
 				$this->set('course_events', $course_events);
 				//instead of rendering a .ctp file, let's just write out directly
 				//$spreadsheet = new PhpSpreadsheet
+
+				//http://abakalidis.blogspot.com/2018/08/how-to-use-latest-phpofficespreadsheet.html
 
 	  			$this->render('excel_get_course_attendance', 'ajax');//which ctp, which layout
 	  			}
