@@ -20,9 +20,9 @@ function multidimensional_search($parents, $searched)
 
 //App::import('Vendor', 'Worksheet', array('file' => 'PhpSpreadsheet'.DS.'Worksheet'.DS.'Worksheet.php'));
 
-App::import('Vendor', 'Worksheet', array('file' => 'PhpOffice'.DS.'PhpSpreadsheet'.DS.'Worksheet'.DS.'Worksheet.php'));
+//App::import('Vendor', 'Spreadsheet', array('file' => 'PhpOffice'.DS.'PhpSpreadsheet'.DS.'Spreadsheet'.DS.'Spreadsheet.php'));
 
-//use PhpOffice\PhpSpreadsheet\Worksheet;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
 		
 class EventsUsersController extends AppController {
 
@@ -472,7 +472,7 @@ class EventsUsersController extends AppController {
 	  			
 				$this->set('course_events', $course_events);
 				//instead of rendering a .ctp file, let's just write out directly
-				$spreadsheet = new Worksheet();
+				$spreadsheet = new Spreadsheet();
 				
 
 				//http://abakalidis.blogspot.com/2018/08/how-to-use-latest-phpofficespreadsheet.html
