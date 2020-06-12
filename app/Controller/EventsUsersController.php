@@ -478,7 +478,7 @@ class EventsUsersController extends AppController {
 				//instead of rendering a .ctp file, let's just write out directly
 				
 				$spreadsheetRow =  1;  //for storing active row
-				$offset =  0;
+				$offset =  1;
 				
 				$spreadsheet = new Spreadsheet();
 
@@ -503,7 +503,8 @@ class EventsUsersController extends AppController {
 				// heading 
 				foreach($table as $columnLabel) {
 					$spreadsheet->getActiveSheet()->setCellValueByColumnAndRow($offset, $spreadsheetRow, $columnLabel['label']);
-					echo $columnLabel['label'];
+					//echo $columnLabel['label'];
+					$offset++;
 				}
 				
 
@@ -529,12 +530,12 @@ class EventsUsersController extends AppController {
 				$spreadsheet->addTableFooter();*/
 
 				//debug($this->PhpExcel)
-				//header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-				//header('Content-Disposition: attachment;filename="export.xlsx"');
-				//header('Cache-Control: max-age=0');
-				//$writer = new Xlsx($spreadsheet);
-				//$writer ->save('php://output');
-				//exit();			
+				header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+				header('Content-Disposition: attachment;filename="export.xlsx"');
+				header('Cache-Control: max-age=0');
+				$writer = new Xlsx($spreadsheet);
+				$writer ->save('php://output');
+				exit();			
 
 				
 
