@@ -470,7 +470,7 @@ class EventsUsersController extends AppController {
 	  			
 				$this->set('course_events', $course_events);
 				//instead of rendering a .ctp file, let's just write out directly
-				$spreadsheet = new Worksheet
+				$spreadsheet = new Worksheet();
 				
 
 				//http://abakalidis.blogspot.com/2018/08/how-to-use-latest-phpofficespreadsheet.html
