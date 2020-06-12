@@ -503,6 +503,7 @@ class EventsUsersController extends AppController {
 				// heading 
 				foreach($table as $columnLabel) {
 					$spreadsheet->getActiveSheet()->setCellValueByColumnAndRow($offset, $spreadsheetRow, $columnLabel['label']);
+					echo $columnLabel['label'];
 				}
 				
 
@@ -528,12 +529,12 @@ class EventsUsersController extends AppController {
 				$spreadsheet->addTableFooter();*/
 
 				//debug($this->PhpExcel)
-				header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-				header('Content-Disposition: attachment;filename="export.xlsx"');
-				header('Cache-Control: max-age=0');
-				$writer = new Xlsx($spreadsheet);
-				$writer ->save('php://output');
-				exit();			
+				//header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+				//header('Content-Disposition: attachment;filename="export.xlsx"');
+				//header('Cache-Control: max-age=0');
+				//$writer = new Xlsx($spreadsheet);
+				//$writer ->save('php://output');
+				//exit();			
 
 				
 
