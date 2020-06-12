@@ -18,9 +18,11 @@ function multidimensional_search($parents, $searched)
 	  	return false; 
 		} 
 
-//App::import('Vendor', 'Worksheet', array('file' => 'PhpSpreadsheet'.DS.'Worksheet'.DS.'Worksheet.php'));	
+//App::import('Vendor', 'Worksheet', array('file' => 'PhpSpreadsheet'.DS.'Worksheet'.DS.'Worksheet.php'));
 
-use PhpOffice\PhpSpreadsheet\Worksheet;
+App::import('Vendor', 'Worksheet', array('file' => 'PhpOffice'.DS.'PhpSpreadsheet'.DS.'Worksheet'.DS.'Worksheet.php'));
+
+//use PhpOffice\PhpSpreadsheet\Worksheet;
 		
 class EventsUsersController extends AppController {
 
