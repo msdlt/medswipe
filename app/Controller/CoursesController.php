@@ -137,6 +137,7 @@ class CoursesController extends AppController {
 						//now need to find details of newly added users
 						//look up user in Users table
 						$user = $this->Course->CoursesUser->User->find('first', array('conditions' => array('User.username' => $value['username'])));  //rtrim removes extra full stop
+						debug($user);
 						if($user)
 							{
 							//user with this username already exists
