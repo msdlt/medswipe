@@ -12,7 +12,7 @@ class CoursesUser extends AppModel {
 				"{$this->alias}.course_id" => $this->data[$this->alias]['course_id'],
 						"{$this->alias}.user_id"  => $this->data[$this->alias]['user_id']
 		);
-		debug({$this->alias}.user_id);
+		debug($this->data[$this->alias]['user_id']);
 		return $this->isUnique($combi, false);
 	}
 
