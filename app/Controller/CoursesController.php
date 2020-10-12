@@ -280,6 +280,7 @@ class CoursesController extends AppController {
 				)
 				{
 				debug($this->request->data);
+				phpinfo();
 				if ($this->Course->saveAll($this->request->data, array('validate'=>'first')))//, array('validate'=>'first')))
 					{
 					$this->Course->Event->commit();
