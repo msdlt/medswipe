@@ -131,7 +131,7 @@ class CoursesController extends AppController {
 						{
 						//newly created users won't have ids
 						$current_users[$value['id']] = $value['id'];
-						debug($value['id']);
+						//debug($value['id']);
 						}
 					elseif(isset($value['username']))
 						{
@@ -279,7 +279,7 @@ class CoursesController extends AppController {
 					)
 				)
 				{
-				//debug($this->request->data);
+				debug($this->request->data);
 				if ($this->Course->saveAll($this->request->data, array('validate'=>'first')))//, array('validate'=>'first')))
 					{
 					$this->Course->Event->commit();
