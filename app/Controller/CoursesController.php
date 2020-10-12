@@ -131,13 +131,13 @@ class CoursesController extends AppController {
 						{
 						//newly created users won't have ids
 						$current_users[$value['id']] = $value['id'];
+						debug($value['id']);
 						}
 					elseif(isset($value['username']))
 						{
 						//now need to find details of newly added users
 						//look up user in Users table
 						$user = $this->Course->CoursesUser->User->find('first', array('conditions' => array('User.username' => $value['username'])));  //rtrim removes extra full stop
-						debug($user);
 						if($user)
 							{
 							//user with this username already exists
