@@ -754,7 +754,8 @@ class EventsUsersController extends AppController {
 				//user might not exist or may already exist with a different barcode
 				//CakeLog::write('debug', 'User might not exist or may already exist with a different barcode');
 				//Lookup user on Oak LDAP
-				putenv("KRB5CCNAME=/var/lib/webauth/krb5cc_ldap");
+				//putenv("KRB5CCNAME=/var/lib/webauth/krb5cc_ldap");
+				putenv("KRB5CCNAME=/var/www/krb5cc_oak-ldap");
 				$base = 'ou=people,dc=oak,dc=ox,dc=ac,dc=uk';
 				$ldap = false;
 				$ldap = ldap_connect('ldaps://ldap.oak.ox.ac.uk');

@@ -393,7 +393,8 @@ class CoursesController extends AppController {
 								{
 								//create user - look up necessaruy details first
 								//Lookup user on Oak LDAP
-								putenv("KRB5CCNAME=/var/lib/webauth/krb5cc_ldap");
+								//putenv("KRB5CCNAME=/var/lib/webauth/krb5cc_ldap");
+								putenv("KRB5CCNAME=/var/www/krb5cc_oak-ldap");
 								$base = 'ou=people,dc=oak,dc=ox,dc=ac,dc=uk';
 								$ldap = false;
 								$ldap = ldap_connect('ldaps://ldap.oak.ox.ac.uk');
