@@ -167,13 +167,13 @@ class CoursesController extends AppController {
 									}
 								else
 									{
-									$search = ldap_search($ldap, $base, '(oakPrincipal=krbPrincipalName='.$value['username'].'@OX.AC.UK,cn=OX.AC.UK,cn=KerberosRealms,dc=oak,dc=ox,dc=ac,dc=uk)');
+									$search = ldap_search($ldap, $base, '(oakPrincipal=krbPrincipalName='.strtolower($value['username']).'@OX.AC.UK,cn=OX.AC.UK,cn=KerberosRealms,dc=oak,dc=ox,dc=ac,dc=uk)');
 									//$search = ldap_search($ldap, $base, '(sn=hoggarth)');
 									$first_name = 'first';
 								   	$last_name = 'last';
 									if ($search) {
 										$entries = ldap_get_entries($ldap,$search);
-										print_r($entries);
+										//print_r($entries);
 										$first_name = $entries[0]["givenname"][0]; //'Pauline';////'Pauline';//
 								    	$last_name = $entries[0]["sn"][0]; //'Woolley'; ////'Woolley'; //
 								    	$oak_person_id = $entries[0]["oakprimarypersonid"][0]; //'13245365';////'13245365';//
@@ -411,7 +411,7 @@ class CoursesController extends AppController {
 									else
 										{
 										//$search = ldap_search($ldap, $base, '(oakPrincipal=krbPrincipalName=ball3136@OX.AC.UK,cn=OX.AC.UK,cn=KerberosRealms,dc=oak,dc=ox,dc=ac,dc=uk)');
-										$search = ldap_search($ldap, $base, '(oakPrincipal=krbPrincipalName='.$value.'@OX.AC.UK,cn=OX.AC.UK,cn=KerberosRealms,dc=oak,dc=ox,dc=ac,dc=uk)');
+										$search = ldap_search($ldap, $base, '(oakPrincipal=krbPrincipalName='.strtolower($value).'@OX.AC.UK,cn=OX.AC.UK,cn=KerberosRealms,dc=oak,dc=ox,dc=ac,dc=uk)');
 										//$search = ldap_search($ldap, $base, '(sn=hoggarth)');
 										$first_name = 'first';
 										$last_name = 'last';
