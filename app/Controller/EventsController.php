@@ -65,7 +65,7 @@ class EventsController extends AppController {
 	 				"Event.end_date >=" => date('Y-m-d H:i:s', strtotime("-30min"))
 	 				)
 				 );
-		echo(date('Y-m-d H:i:s', strtotime("+30min"))." ".date('Y-m-d H:i:s', strtotime("-30min"));
+		echo(date('Y-m-d H:i:s', strtotime("+30min"))." ".date('Y-m-d H:i:s', strtotime("-30min")));
 		//if(!isset($this->params['named']['oaked'])||$this->params['named']['oaked']=='false')
 			//{
 			//temporary step to redirect to https://msdlt.physiol.ox.ac.uk/oak-test/oak-test.php until Neil sorts out permissions issue
